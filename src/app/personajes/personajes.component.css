@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+}
+
+.card {
+    margin-top: 50px;
+    display: inline-block;
+    margin-right: 4em;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+}
+
+#contenedor {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
