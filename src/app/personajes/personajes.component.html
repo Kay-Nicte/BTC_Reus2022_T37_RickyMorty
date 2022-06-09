@@ -16,9 +16,16 @@
                 <div class="card" style="width: 18rem;" *ngFor="let personaje of pjs">
                     <img src={{personaje.image}} class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{personaje.name}}</h5>
+                        <!-- Pipe para poner en mayúsculas el nombre del personajes -->
+                        <h5 class="card-title">{{personaje.name | uppercase}}</h5>
                         <p>
-                            Name: {{personaje.name}}<br> Status: {{personaje.status}}<br> Species: {{personaje.species}}<br> Gender: {{personaje.gender}}
+                            Name: {{personaje.name}}
+
+                            <br> Status: {{personaje.status}}
+
+                            <br> Species: {{personaje.species}}
+
+                            <br> Gender: {{personaje.gender}}
 
                         </p>
                         <a href="#" class="btn btn-success">Show Information</a>

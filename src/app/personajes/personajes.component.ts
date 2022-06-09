@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { PersonajesService } from '../personajes.service';
 
 @Component({
   selector: 'app-personajes',
@@ -10,7 +10,9 @@ export class PersonajesComponent implements OnInit {
 
   pjs:any = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private personajesService: PersonajesService) { }
 
   ngOnInit(){
-    this.http.get("https://rickandmortyapi.com/api/character/1,3,5,9,11,13").subscribe(result => {this.pjs = result;}, error => {console.log('Error occurred')})}}
+    this.personajesService.devolver().subscribe(result => this.pjs = result)
+  }
+}
